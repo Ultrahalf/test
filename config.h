@@ -23,7 +23,7 @@
 #define MANUFACTURER Bastard Keyboards
 #define PRODUCT Skeletyl
 
-#define MATRIX_ROWS 8
+#define MATRIX_ROWS 4
 #define MATRIX_COLS 10
 #define MATRIX_COL_PINS { GP0, GP1, GP2, GP3, GP4, GP5, GP6, GP7, GP8, GP9 }
 #define MATRIX_ROW_PINS { GP12, GP13, GP14, GP15 }
@@ -41,18 +41,24 @@
 
 #define DIODE_DIRECTION COL2ROW
 
-#define TAPPING_TERM 200
+// reset 
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET // Activates the double-tap behavior
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP25
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
 
+#define TAPPING_TERM 200
 // Prevent normal rollover on alphas from accidentally triggering mods.
 #define IGNORE_MOD_TAP_INTERRUPT
-
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define TAPPING_FORCE_HOLD
+
 
 // Auto Shift
 #define NO_AUTO_SHIFT_ALPHA
 #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
 #define AUTO_SHIFT_NO_SETUP
+
+#define CAPS_WORD_IDLE_TIMEOUT 3000
 
 // Mouse key speed and acceleration.
 #define MOUSEKEY_DELAY          0
